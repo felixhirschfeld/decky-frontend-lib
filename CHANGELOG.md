@@ -1,3 +1,10 @@
+## [4.12.1](https://github.com/SteamDeckHomebrew/decky-frontend-lib/compare/v4.12.0...v4.12.1) (2026-09-14)
+
+
+### Bug Fixes
+
+* **components:** fix filters for latest beta's minifier changes ([aad5a9a](https://github.com/SteamDeckHomebrew/decky-frontend-lib/commit/aad5a9a41d33293b9c529e0d1f49021e6c971891))
+
 # [4.12.0](https://github.com/SteamDeckHomebrew/decky-frontend-lib/compare/v4.11.6...v4.12.0) (2026-07-14)
 
 
