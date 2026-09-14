@@ -85,7 +85,7 @@ export const findModuleDetailsByExport = (
               continue;
             }
           } catch (e) {
-            logger.warn("Webpack filter threw exception: ", e);
+            logger.warn("Webpack filter threw exception: ", e, "Filter: ", filter);
           }
         }
       }
@@ -154,7 +154,7 @@ export const CommonUIModule = findModule((m: Module) => {
 });
 
 export const IconsModule = findModuleByExport(
-  (e) => e?.toString && /Spinner\),children:\[\(0,\w+\.jsx\)\("path",\{d:"M18 /.test(e.toString()) || /Spinner\)}\)?,.\.createElement\(\"path\",{d:\"M18 /.test(e.toString()),
+  (e) => e?.toString && /Spinner\),children:\[\(0,\w+\.jsx\)\("path",\{d:"M18 /.test(e.toString?.()) || /Spinner\)}\)?,.\.createElement\(\"path\",{d:\"M18 /.test(e.toString?.()),
 );
 
 export const ReactRouter = findModuleByExport((e) => e.computeRootMatch);

@@ -26,5 +26,5 @@ export interface SidebarNavigationProps {
 
 const sidebarNavigationRegex = createPropListRegex(["pages", "fnSetNavigateToPage", "disableRouteReporting"]);
 export const SidebarNavigation = findModuleExport((e: Export) =>
-  e?.toString && sidebarNavigationRegex.test(e.toString()),
+  e?.toString && sidebarNavigationRegex.test(e.toString?.()),
 ) as FC<SidebarNavigationProps>;

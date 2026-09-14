@@ -16,5 +16,5 @@ export interface MarqueeProps {
 }
 
 export const Marquee: FC<MarqueeProps> = findModuleExport(
-  (e: Export) => e?.toString && e.toString().includes('.Marquee') && e.toString().includes('--fade-length'),
+  (e: Export) => e?.toString && e.toString?.().includes('.Marquee') && e.toString?.().includes('--fade-length'),
 );

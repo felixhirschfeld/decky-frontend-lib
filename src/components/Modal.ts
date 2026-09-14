@@ -39,7 +39,7 @@ const showModalRaw: (
   modalManager?: unknown,
 ) => ShowModalResult = findModuleExport(
   (e: Export) =>
-    typeof e === 'function' && e.toString().includes('props.bDisableBackgroundDismiss') && !e?.prototype?.Cancel,
+    typeof e === 'function' && e.toString?.().includes('props.bDisableBackgroundDismiss') && !e?.prototype?.Cancel,
 );
 
 export const showModal = (
@@ -83,12 +83,12 @@ export interface ConfirmModalProps extends ModalRootProps {
 }
 
 export const ConfirmModal = findModuleExport(
-  (e: Export) => e?.toString()?.includes('bUpdateDisabled') && e?.toString()?.includes('closeModal') && e?.toString()?.includes('onGamepadCancel'),
+  (e: Export) => e?.toString?.()?.includes('bUpdateDisabled') && e?.toString?.()?.includes('closeModal') && e?.toString?.()?.includes('onGamepadCancel'),
 ) as FC<ConfirmModalProps>;
 
 export const ModalRoot = 
   // new
-  findModuleExport((e: Export) => typeof e === 'function' && e.toString().includes('Either closeModal or onCancel should be passed to GenericDialog. Classes: ')) || 
+  findModuleExport((e: Export) => typeof e === 'function' && e.toString?.().includes('Either closeModal or onCancel should be passed to GenericDialog. Classes: ')) || 
   // old
   Object.values(
     findModule((m: any) => {
@@ -109,7 +109,7 @@ interface SimpleModalProps {
   children: ReactNode;
 }
 
-const [ModalModule, _ModalPosition] = findModuleDetailsByExport((e: Export) => e?.toString().includes('.ModalPosition'), 5)
+const [ModalModule, _ModalPosition] = findModuleDetailsByExport((e: Export) => e?.toString?.().includes('.ModalPosition'), 5)
 
 const ModalModuleProps = ModalModule ? Object.values(ModalModule) : [];
 

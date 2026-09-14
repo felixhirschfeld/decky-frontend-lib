@@ -10,5 +10,5 @@ export interface ControlsListProps {
 
 export const ControlsList: FC<ControlsListProps> = findModuleExport(
   (e: Export) =>
-    e?.toString && e.toString().includes('().ControlsListChild') && e.toString().includes('().ControlsListOuterPanel'),
+    e?.toString && e.toString?.().includes('().ControlsListChild') && e.toString?.().includes('().ControlsListOuterPanel'),
 );

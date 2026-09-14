@@ -123,8 +123,8 @@ export const showContextMenu: (
 ) => ContextMenuInstance = findModuleExport(
   (e: Export) =>
     typeof e === 'function' &&
-    e.toString().includes('GetContextMenuManagerFromWindow(') &&
-    e.toString().includes('.CreateContextMenuInstance('),
+    e.toString?.().includes('GetContextMenuManagerFromWindow(') &&
+    e.toString?.().includes('.CreateContextMenuInstance('),
 );
 
 export interface MenuProps extends FooterLegendProps {
@@ -138,7 +138,7 @@ const MenuModule = findModuleDetailsByExport((e: Export) => e?.render?.toString(
 
 export const Menu: FC<MenuProps> =
 	findModuleExport((e: Export) => e?.prototype?.HideIfSubmenu && e?.prototype?.HideMenu) || // Legacy Menu
-	(Object.values(MenuModule?.[0] ?? {}).find((e) => e?.toString()?.includes?.(`useId`) && e?.toString()?.includes?.(`labelId`)) as FC<MenuProps>); // New Menu 6/15/2025
+	(Object.values(MenuModule?.[0] ?? {}).find((e) => e?.toString?.()?.includes?.(`useId`) && e?.toString?.()?.includes?.(`labelId`)) as FC<MenuProps>); // New Menu 6/15/2025
 
 export interface MenuGroupProps {
   label: string;
@@ -146,8 +146,9 @@ export interface MenuGroupProps {
   children?: ReactNode;
 }
 
-const MenuGoupModule = findModuleByExport(e => e?.prototype?.Focus && e?.prototype?.OnOKButton && e?.prototype?.render?.toString().includes?.(`"emphasis"==this.props.tone`));
-export const MenuGroup: FC<MenuGroupProps> = MenuGoupModule && Object.values(MenuGoupModule).find((e: Export) => typeof e == "function" && e?.toString?.()?.includes("bInGamepadUI:"));
+// New || Old 9/14/2026
+const MenuGroupModule = findModuleByExport(e => e?.prototype?.Focus && e?.prototype?.OnOKButton && (e?.prototype?.render?.toString().includes?.(`this.props.tone=="emphasis"`) || e?.prototype?.render?.toString().includes?.(`"emphasis"==this.props.tone`)));
+export const MenuGroup: FC<MenuGroupProps> = MenuGroupModule && Object.values(MenuGroupModule).find((e: Export) => typeof e == "function" && e?.toString?.()?.includes("bInGamepadUI:"));
 export interface MenuItemProps extends FooterLegendProps {
   bInteractableItem?: boolean;
   onClick?(evt: Event): void;
@@ -164,7 +165,7 @@ export interface MenuItemProps extends FooterLegendProps {
 export const MenuItem: FC<MenuItemProps> = MenuModule?.[1];
 
 export const MenuSeparator: FC = findModuleExport(
-  (e: Export) => typeof e === 'function' && /className:.+?\.ContextMenuSeparator/.test(e.toString()),
+  (e: Export) => typeof e === 'function' && /className:.+?\.ContextMenuSeparator/.test(e.toString?.()),
 );
 
 /*

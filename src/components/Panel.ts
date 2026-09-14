@@ -14,7 +14,7 @@ export interface PanelSectionProps {
   children?: ReactNode;
 }
 
-const [mod, panelSection] = findModuleDetailsByExport((e: Export) => e.toString()?.includes('.PanelSection'));
+const [mod, panelSection] = findModuleDetailsByExport((e: Export) => e.toString?.()?.includes('.PanelSection'));
 
 export const PanelSection = panelSection as FC<PanelSectionProps>;
 

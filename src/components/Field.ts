@@ -25,6 +25,6 @@ export interface FieldProps extends FooterLegendProps {
 }
 
 // new || old
-export const Field = findModuleExport((e: Export) => (e?.toString()?.includes('().Field') && e?.toString()?.includes('"shift-children-below"')) || e?.render?.toString()?.includes('"shift-children-below"')) as FC<
+export const Field = findModuleExport((e: Export) => (e?.toString?.()?.includes('().Field') && e?.toString?.()?.includes('"shift-children-below"')) || e?.render?.toString()?.includes('"shift-children-below"')) as FC<
   FieldProps & RefAttributes<HTMLDivElement>
 >;
