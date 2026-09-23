@@ -9,6 +9,10 @@ export interface DialogCommonProps extends RefAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 
+export interface DialogSettingsSectionProps extends DialogCommonProps {
+  label?: ReactNode;
+}
+
 export interface DialogButtonProps extends DialogCommonProps, FooterLegendProps {
   /**
    * Enables/disables the focus around the button.
@@ -90,6 +94,10 @@ export const DialogBodyText = MappedDialogDivs.get('DialogBodyText') as FC<Dialo
 export const DialogBody = MappedDialogDivs.get('DialogBody') as FC<DialogCommonProps>;
 export const DialogControlsSection = MappedDialogDivs.get('DialogControlsSection') as FC<DialogCommonProps>;
 export const DialogControlsSectionHeader = MappedDialogDivs.get('DialogControlsSectionHeader') as FC<DialogCommonProps>;
+export const SettingsDialogSubHeader = MappedDialogDivs.get('SettingsDialogSubHeader') as FC<DialogCommonProps>;
+export const DialogSettingsSection = Object.values(CommonUIModule).find((component: Module) =>
+  component?.toString?.()?.includes('"DialogSettingsSection"'),
+) as FC<DialogSettingsSectionProps>;
 
 export const DialogButtonPrimary = Object.values(CommonUIModule).find(
   (mod: any) => mod?.render?.toString?.()?.includes('"DialogButton","_DialogLayout","Primary"'),
