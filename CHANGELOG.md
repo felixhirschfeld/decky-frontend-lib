@@ -1,3 +1,50 @@
+## [4.15.1](https://github.com/SteamDeckHomebrew/decky-frontend-lib/compare/v4.15.0...v4.15.1) (2026-10-18)
+
+
+### Bug Fixes
+
+* **dialog:** bruh ([a3d17ac](https://github.com/SteamDeckHomebrew/decky-frontend-lib/commit/a3d17ace35da8db29999bd7e6d7c7c7e1e23b7d2))
+
+# [4.15.0](https://github.com/SteamDeckHomebrew/decky-frontend-lib/compare/v4.14.0...v4.15.0) (2026-10-18)
+
+
+### Bug Fixes
+
+* **ProgressBar:** sTimeRemaining -> rtEstimatedCompletionTime ([#133](https://github.com/SteamDeckHomebrew/decky-frontend-lib/issues/133)) ([0daae61](https://github.com/SteamDeckHomebrew/decky-frontend-lib/commit/0daae61b11814e4762a321dcad96863d757a97d3))
+
+
+### Features
+
+* **component:** add placeholder field to TextField ([#120](https://github.com/SteamDeckHomebrew/decky-frontend-lib/issues/120)) ([31a7a15](https://github.com/SteamDeckHomebrew/decky-frontend-lib/commit/31a7a153fa3bd7267e21cd3b4102c3ffbfab12eb))
+
+# [4.14.0](https://github.com/SteamDeckHomebrew/decky-frontend-lib/compare/v4.13.2...v4.14.0) (2026-10-18)
+
+
+### Features
+
+* add explainer properties ([#137](https://github.com/SteamDeckHomebrew/decky-frontend-lib/issues/137)) ([c6fa67d](https://github.com/SteamDeckHomebrew/decky-frontend-lib/commit/c6fa67d1dcfd2774e1551b2d0412fa30efb86bde))
+
+## [4.13.2](https://github.com/SteamDeckHomebrew/decky-frontend-lib/compare/v4.13.1...v4.13.2) (2026-10-18)
+
+
+### Bug Fixes
+
+* spacing between reorderable list items ([#138](https://github.com/SteamDeckHomebrew/decky-frontend-lib/issues/138)) ([2853a38](https://github.com/SteamDeckHomebrew/decky-frontend-lib/commit/2853a383a6c47a874910590977c9ff427b7ce77e))
+
+## [4.13.1](https://github.com/SteamDeckHomebrew/decky-frontend-lib/compare/v4.13.0...v4.13.1) (2026-10-18)
+
+
+### Bug Fixes
+
+* **static-classes:** fix on beta ([ef74e5d](https://github.com/SteamDeckHomebrew/decky-frontend-lib/commit/ef74e5d52a5f1558d9d8c5d18bfa768393fa9016))
+
+# [4.13.0](https://github.com/SteamDeckHomebrew/decky-frontend-lib/compare/v4.12.1...v4.13.0) (2026-10-14)
+
+
+### Features
+
+* **utils:** support Steam Frame VR dashboard in findSP ([#139](https://github.com/SteamDeckHomebrew/decky-frontend-lib/issues/139)) ([25bd3f5](https://github.com/SteamDeckHomebrew/decky-frontend-lib/commit/25bd3f5aab3d822a23b01279c843b458805c1452))
+
 ## [4.12.1](https://github.com/SteamDeckHomebrew/decky-frontend-lib/compare/v4.12.0...v4.12.1) (2026-09-14)
 
 
